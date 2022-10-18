@@ -1,0 +1,55 @@
+<!-- 1) Crie um campo <input type="text"> e aplique os seguintes controles com base nos
+eventos abaixo:
+• No evento de foco modifique o background do input para amarelo.
+• Quando o campo perder o foco, recupere o seu respectivo valor e:
+o Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo
+deve ter seu background alterado para vermelho.
+o Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background
+deve ser alterado para verde. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      input {
+        background-color: #ccc;
+      }
+      .green {
+        background: green;
+      }
+
+      .red {
+        background: red;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <span>Digite aqui</span>
+    <input
+      onfocus="colorChange('yellow')"
+      onblur="colorChange2()"
+      type="text"
+      id="target"
+      placeholder="..."
+      class=" "
+    />
+
+    <script>
+      function colorChange(cor) {
+        let target = document.getElementById("target");
+        target.style.background = cor;
+      }
+
+      function colorChange2() {
+        let target = document.getElementById("target");
+        if (target.value.length >= 3) {
+          target.style.background = "green";
+        } else target.style.background = "red";
+      }
+    </script>
+  </body>
+</html>
