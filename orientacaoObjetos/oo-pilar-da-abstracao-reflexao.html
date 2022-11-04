@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //um software de marcenaria
+      // cadeira e sofá
+
+      // paradigma procedural
+
+      //cadeira
+      //   let qtde_pernas = 4;
+      //   let giratoria = false;
+      //   let cor = "azul";
+
+      //   let cadeiras = Array();
+
+      //   cadeiras[0] = Array();
+      //   cadeiras[0]["qtd_pernas"] = 4;
+      //   cadeiras[0]["giratoria"] = false;
+      //   cadeiras[0]["cor"] = "azul";
+
+      //   cadeiras[1] = Array();
+      //   cadeiras[1]["qtd_pernas"] = 4;
+      //   cadeiras[1]["giratoria"] = true;
+      //   cadeiras[1]["cor"] = "vermelha";
+
+      //   function girar_cadeira(indice) {
+      //     if (cadeiras[indice]["giratoria"] === true) {
+      //       console.log("girou");
+      //     } else {
+      //       console.log("cadeira nao é giratória");
+      //     }
+      //   }
+
+      //   function adicionarCadeiras(qtd_pernas, giratoria, cor) {
+      //     let cadeira = Array();
+
+      //     cadeira["qtd_pernas"] = qtd_pernas;
+      //     cadeira["giratoria"] = giratoria;
+      //     cadeira["cor"] = cor;
+
+      //     cadeiras.push(cadeira);
+      //   }
+      //   adicionarCadeiras(3, false, "verde");
+
+      //   console.log(cadeiras);
+
+      //   girar_cadeira(1);
+
+      //paradigma de OO
+      class Cadeira {
+        constructor(qtd_pernas, giratoria, cor) {
+          this.qtd_pernas = qtd_pernas;
+          this.giratoria = giratoria;
+          this.cor = cor;
+        }
+
+        girarCadeira() {
+          if (this.giratoria === true) {
+            console.log("girou");
+          } else {
+            console.log("cadeira nao é giratória");
+          }
+        }
+      }
+
+      let cadeiras = Array();
+
+      cadeiras.push(new Cadeira(4, false, "azul"));
+      cadeiras.push(new Cadeira(1, true, "vermelha"));
+
+      console.log(cadeiras);
+
+      //   cadeira.girarCadeira();
+    </script>
+  </head>
+  <body></body>
+</html>

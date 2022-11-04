@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let quadrado = function (x = 5) {
+        return x * x;
+      };
+
+      let cubo = (x) => x * x * x;
+
+      document.write("quadrado = " + quadrado(3) + "<br />");
+
+      document.write("cubo = " + cubo(2) + "<br />");
+
+      //   let parOuImpar = (numero) => {
+      //     if (numero % 2 === 0) {
+      //       return "Par";
+      //     } else {
+      //       return "impar";
+      //     }
+      //   };
+
+      //if ternario
+      let parOuImpar = (numero) => (numero % 2 === 0 ? "Par" : "impar");
+
+      document.write("Par ou impar = " + parOuImpar(10));
+    </script>
+  </head>
+  <body></body>
+</html>
