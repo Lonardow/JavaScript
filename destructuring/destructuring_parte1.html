@@ -9,9 +9,19 @@
       //destructuring
       let frutas = ["Abacaxi", "Uva", "Pera", "Mamão"];
 
-      let [] = frutas;
+      // let [a, b, , c] = frutas; //pular um indice
 
-      console.log(a);
+      let [a, b = "Abacate", c, d, e = "Banana"] = frutas; // default values
+
+      let coisas = [
+        ["Abacaxi", "Uva", "Pera", "Mamão"],
+        ["Jose", "Maria"],
+      ];
+      let [[, , y], []] = coisas;
+
+      console.log(a, b, c, d, e);
+
+      console.log(y);
     </script>
   </head>
   <body></body>
